@@ -8,7 +8,7 @@ const app = express();
 ////// connect to MongoDB
 
 const dbURI =
-  "mongodb+srv://doggo45:iLikeTreats666@keechcluster.vudhnux.mongodb.net/?retryWrites=true&w=majority";  // this is a dummy database, obviously links containing actual sensitive info shouldn't be in a public repository
+  "link to database here";  
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })  // the second argument will stop deprecation messages from logging, although it's unnecessary in this case
      .then(result => app.listen(3002))
      .then(()=>console.log('connected'))
