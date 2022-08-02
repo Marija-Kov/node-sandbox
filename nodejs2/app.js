@@ -3,12 +3,12 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes')
 const app = express();
+require('dotenv').config();
 
 
 ////// connect to MongoDB
 
-const dbURI =
-  "link to database here";  
+const dbURI = process.env.MONGO_URI;  
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })  // the second argument will stop deprecation messages from logging, although it's unnecessary in this case
      .then(result => app.listen(3002))
      .then(()=>console.log('connected'))
